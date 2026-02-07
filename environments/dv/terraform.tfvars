@@ -1,5 +1,5 @@
 api_server    = "synthetic-monitoring-grpc-ap-south-1.grafana.net:443"
-api_token     = "/YwHR80VulFdnC5TXusaHl8vAX7kmrbDee7mMNYAPy2BsJnSyRz5GjbCyPA9U2PVX+vKjLwQjkvQmGvss8JWYSLYWo6quH4oJCQUZEEovxQpoeUWaw85tnOcpBPKKG7ylkkuuSh/VdYISNf17w0JzQjiK5Nb4cWcxcx3j6cxQS8="
+api_token     = "token here"
 namespace     = "synthetic-monitoring"
 chart_version = "1.2.1"
 image_tag = "v0.51.2"

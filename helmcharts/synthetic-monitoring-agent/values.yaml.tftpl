@@ -1,0 +1,42 @@
+agent:
+  apiToken: "${agent_api_token}"
+  apiServerAddress: "${agent_api_server_address}"
+  debug: false
+  enableDisconnect: false
+  verbose: false
+
+replicaCount: ${replica_count}
+
+image:
+  registry: docker.io
+  repository: grafana/synthetic-monitoring-agent
+  pullPolicy: IfNotPresent
+  tag: "${image_tag}"
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: http
+
+service:
+  annotations: {}
+  type: ClusterIP
+  port: 4050
+
+serviceAccount:
+  create: true
+  annotations: {}
+  automountServiceAccountToken: true
+  name: ""
+  
+nameOverride: ""
+fullnameOverride: "${workload_name}"  
+
+secret:
+  existingSecret: ""
+

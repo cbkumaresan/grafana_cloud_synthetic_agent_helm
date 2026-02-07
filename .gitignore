@@ -10,7 +10,7 @@ override.tf.json
 *_override.tf.json  
 
 # Environment files (if they contain secrets)  
-.tfvars
+*.tfvars
 # Backup files  
 *.backup  
 *.bak  
